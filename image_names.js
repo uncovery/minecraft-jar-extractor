@@ -306,7 +306,7 @@ function copyTextures (unzippedFilesDir, outputDir, minecraftVersion) {
   var arr = minecraftVersion.split('.').map(val => val)
 
   // since we are only inerested in the major version (e.g. 1.13, not 1.13.2) we concatenate only the first 2 elements
-  var majorVersion = arr[0] + arr[1];
+  var majorVersion = arr[0] + arr[1]
 
   // convert the resulting string into a number
   var numericMajor = Number(majorVersion)
