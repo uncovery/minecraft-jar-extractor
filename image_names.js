@@ -300,19 +300,19 @@ function getModels (unzippedFilesDir, blocksStatesPath, blocksModelsPath, blockM
 function copyTextures (unzippedFilesDir, outputDir, minecraftVersion) {
   // we need to determine if the folder has an "s" at the end or not. This was changed with version 1.13
   const referenceVersion = 113 // this is the version when the naming was changed
-  
+
   // we'll compare numerically with the given version number (which is passed as a string), so we need to convert
   // let's split the version string into an array on "."
-  var arr = minecraftVersion.split(".").map(val => val); 
-  
+  var arr = minecraftVersion.split('.').map(val => val)
+
   // since we are only inerested in the major version (e.g. 1.13, not 1.13.2) we concatenate only the first 2 elements
-  var majorVersion = arr[0] + arr[1]; 
-  
+  var majorVersion = arr[0] + arr[1];
+
   // convert the resulting string into a number
-  var numericMajor = Number(majorVersion);
-  
+  var numericMajor = Number(majorVersion)
+
   // then compare and take the consequences
-  const recentVersion = numericMajor >= referenceVersion  
+  const recentVersion = numericMajor >= referenceVersion
   const inputBlocksDir = recentVersion ? 'block' : 'blocks'
   const inputItemsDir = recentVersion ? 'item' : 'items'
 
